@@ -20,3 +20,5 @@
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES := base-files busybox uci curl kmod-tun tinyproxy kmod-tcp-bbr kmod-sched-core/' target/linux/ramips/mt7621/target.mk
+cp -f .config openwrt/.config
+make defconfig
